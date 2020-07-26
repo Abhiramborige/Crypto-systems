@@ -36,9 +36,8 @@ def message_matrix(s,n):
     s=s.lower()
     final_matrix=[]
     if(len(s)%n!=0):
-        # may be negative also
-        for i in range(abs(len(s)%n)):
-            # z is the bogus word
+        # z is the bogus word
+        while(len(s)%n!=0):
             s=s+'z'
     print("Converted plain_text for encryption: ",s)
     for k in range(len(s)//n):
