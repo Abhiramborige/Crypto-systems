@@ -155,3 +155,15 @@ plain_text=input("Enter the message: ")
 # calling second function
 conversion(plain_text)
 
+'''
+----------OUTPUT----------
+Enter the key: Make my day beautiful
+Key Matrix for encryption:
+['makey', 'dbuti', 'flcgh', 'nopqr', 'svwxz']
+Enter the message: hi there my name is abhiram
+plain text pairs:  ['hi', 'th', 'er', 'em', 'yn', 'am', 'ei', 'sa', 'bh', 'ir', 'am']
+cipher text pairs:  ['rh', 'ig', 'yq', 'ya', 'mr', 'ka', 'yt', 'vm', 'il', 'hz', 'ka']
+plain text:  hitheremynameisabhiram
+cipher text:  rhigyqyamrkaytvmilhzka
+>>> 
+'''
