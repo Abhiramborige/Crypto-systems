@@ -147,3 +147,41 @@ if(det!=0):
     print("plain message: ",plain_text)
 else:
     print("Matrix cannot be inverted")
+
+'''
+----------OUTPUT----------
+What will be the order of square matrix: 3
+Enter the key: BACK UP ABC
+The key matrix (3x3) is:
+['bac', 'kup', 'abc']
+[1, 0, 2]
+[10, 20, 15]
+[0, 1, 2]
+Adjoint Matrix before modulo26 operation: 
+[25.000000000000014, 2.000000000000001, -40.000000000000014]
+[-20.000000000000004, 2.000000000000001, 5.000000000000001]
+[10.000000000000002, -1.0000000000000004, 20.000000000000004]
+11
+Adjoint Matrix after modulo26 operation: 
+[25, 2, 12]
+[6, 2, 5]
+[10, 25, 20]
+Inverse matrix after applying modulo26 operation: 
+[15, 22, 2]
+[14, 22, 3]
+[6, 15, 12]
+Enter the cipher text: tvuppmaqilyyocsovpierkhx
+Converted cipher_text for decryption:  tvuppmaqilyyocsovpierkhx
+The column matrices of plain text in numbers are:  
+[[19], [21], [20]]
+[[15], [15], [12]]
+[[0], [16], [8]]
+[[11], [24], [24]]
+[[14], [2], [18]]
+[[14], [21], [15]]
+[[8], [4], [17]]
+[[10], [7], [23]]
+plain message:  hitheremynameisabhiramzz
+>>> 
+'''
+    
