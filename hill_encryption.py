@@ -160,6 +160,30 @@ for i in message:
             final_message+=k
 print("plain message: ",plain_text)
 print("final encrypted message: ",final_message)
-    
+
+'''
+----------OUTPUT----------
+What will be the order of square matrix: 3
+Enter the key: BACK UP ABC
+The key matrix (3x3) is:
+['bac', 'kup', 'abc']
+[1, 0, 2]
+[10, 20, 15]
+[0, 1, 2]
+Yes it is invertable and can be decrypted
+Enter the message: hi there my name is abhiram
+Converted plain_text for encryption:  hitheremynameisabhiramz
+The column matrices of plain text in numbers are:  
+[[7], [8], [19]]
+[[7], [4], [17]]
+[[4], [12], [24]]
+[[13], [0], [12]]
+[[4], [8], [18]]
+[[0], [1], [7]]
+[[8], [17], [0]]
+plain message:  hi there my name is abhiram
+final encrypted message:  tvuppmaqilyyocsovpier
+>>> 
+'''
                 
             
