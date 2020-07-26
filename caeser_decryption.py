@@ -3,7 +3,7 @@ def decrypt(text,s):
     n=int(input())
     # Cipher(n) = De-cipher(26-n)
 
-    s=26-s
+    s=26-s 
         
     result=""  #empty string
     for i in range(len(text)):
