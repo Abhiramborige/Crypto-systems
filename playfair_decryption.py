@@ -143,3 +143,15 @@ cipher_text=input("Enter the encrypted message: ")
 # calling second function
 conversion(cipher_text)
 
+'''
+----------OUTPUT----------
+Enter the key: Make my day beautiful
+Key Matrix for encryption:
+['makey', 'dbuti', 'flcgh', 'nopqr', 'svwxz']
+Enter the encrypted message: rhigyqyamrkaytvmilhzka
+cipher text pairs:  ['rh', 'ig', 'yq', 'ya', 'mr', 'ka', 'yt', 'vm', 'il', 'hz', 'ka']
+plain text pairs:  ['hi', 'th', 'er', 'em', 'yn', 'am', 'ei', 'sa', 'bh', 'ir', 'am']
+cipher text:  rhigyqyamrkaytvmilhzka
+plain text (message):  hitheremynameisabhiram
+>>> 
+'''
