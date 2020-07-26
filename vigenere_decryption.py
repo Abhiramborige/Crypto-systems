@@ -14,13 +14,8 @@ def conversion(cipher_text,key):
             # to get the number corresponding to the alphabet
             off=ord(key[index])-ord('a')
 
-            decrypt_num=ord(c)-ord('a')-off
-            # sometimes decrypt_num may go negative
-            if decrypt_num<0:
-                decrypt_num+=26
-                
-            # default condition
-            decrypt=chr(decrypt_num+ord('a'))
+            positive_off=26-off
+            decrypt=chr((ord(c)-ord('a')+positive_off)%26+ord('a'))
             
             # adding into plain text to get the decrypted messag
             plain_text+=decrypt
@@ -38,3 +33,12 @@ key=input("Enter the key for decryption: ")
 
 # calling function
 conversion(cipher_text,key)
+
+'''
+----------OUTPUT----------
+Enter the message to be decrypted: he xzsdi zu brxh io etvuvni
+Enter the key for decryption: awesome world
+cipher text:  he xzsdi zu brxh io etvuvni
+plain text (message):  hi there my name is abhiram
+>>>
+'''
