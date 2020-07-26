@@ -172,7 +172,7 @@ The key matrix (3x3) is:
 [0, 1, 2]
 Yes it is invertable and can be decrypted
 Enter the message: hi there my name is abhiram
-Converted plain_text for encryption:  hitheremynameisabhiramz
+Converted plain_text for encryption:  hitheremynameisabhiramzz
 The column matrices of plain text in numbers are:  
 [[7], [8], [19]]
 [[7], [4], [17]]
@@ -181,8 +181,9 @@ The column matrices of plain text in numbers are:
 [[4], [8], [18]]
 [[0], [1], [7]]
 [[8], [17], [0]]
+[[12], [25], [25]]
 plain message:  hi there my name is abhiram
-final encrypted message:  tvuppmaqilyyocsovpier
+final encrypted message:  tvuppmaqilyyocsovpierkhx
 >>> 
 '''
                 
