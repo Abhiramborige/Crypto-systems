@@ -2,7 +2,7 @@ def encrypt(text,s):
     print("Enter 1 to encrypt a word\nEnter 2 to decrypt a word")
     n=int(input())
     # Cipher(n) = De-cipher(26-n)
-
+  
     s=s  
     result=""  #empty string
     for i in range(len(text)):
