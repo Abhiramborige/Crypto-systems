@@ -1,5 +1,5 @@
 ## Crypto-systems
-### This **repository** contains the python codes for:
+### This *repository* contains the python codes for:
 * #### Playfair cipher 
   * #### Encryption
   * #### Decryption
