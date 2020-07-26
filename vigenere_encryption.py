@@ -40,3 +40,13 @@ key=input("Enter the key: ")
 
 # calling function
 conversion(plain_text,key)
+
+
+'''
+----------OUTPUT----------
+Enter the message: hi there my name is abhiram
+Enter the key: awesome world
+plain text:  hi there my name is abhiram
+cipher text:  he xzsdi zu brxh io etvuvni
+>>> 
+'''
