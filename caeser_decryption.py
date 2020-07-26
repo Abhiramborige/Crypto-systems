@@ -1,8 +1,6 @@
 def decrypt(text,s):
-    print("Enter 1 to encrypt a word\nEnter 2 to decrypt a word")
-    n=int(input())
-    # Cipher(n) = De-cipher(26-n)
 
+    # Cipher(n) = De-cipher(26-n)
     s=26-s 
         
     result=""  #empty string
@@ -20,3 +18,10 @@ d=int(input("Enter the key: "))
 
 print("Encoded word in Caeser cipher is: ",decrypt(word,d))
 
+'''
+----------OUTPUT----------
+enter the word:klqwkhuhqpbqqdphqlvqdekludp
+Enter the key: 3
+Encoded word in Caeser cipher is:  hintherenmynnamenisnabhiram
+>>> 
+'''
