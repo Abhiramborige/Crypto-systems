@@ -21,6 +21,6 @@ print("Encoded word in Caeser cipher is: ",encrypt(word,k))
 ----------OUTPUT----------
 enter the word:hi there my name is abhiram
 Enter the key: 3
-Encoded word in Caeser cipher is:  klqwkhuhqpbqqdphqlvqdekludp
+Encoded word in Caeser cipher is:  klwkhuhpbqdphlvdekludp
 >>> 
 '''
