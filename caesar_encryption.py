@@ -2,6 +2,7 @@ def encrypt(text,s):
    
     # Cipher(n) = De-cipher(26-n)
     s=s   
+    text =text.replace(" ","")
     result=""  #empty string
     for i in range(len(text)):
         char=text[i]
