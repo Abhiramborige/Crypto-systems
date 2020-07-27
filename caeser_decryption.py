@@ -20,8 +20,8 @@ print("Encoded word in Caeser cipher is: ",decrypt(word,d))
 
 '''
 ----------OUTPUT----------
-enter the word:klqwkhuhqpbqqdphqlvqdekludp
+enter the word:klwkhuhpbqdphlvdekludp
 Enter the key: 3
-Encoded word in Caeser cipher is:  hintherenmynnamenisnabhiram
+Encoded word in Caeser cipher is:  hitheremynameisabhiram
 >>> 
 '''
