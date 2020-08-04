@@ -13,5 +13,5 @@
   * Encryption
   * Decryption
 * Rail Fence cipher
- * Encryption
+  * Encryption
 ### Hope you like it :smiley::smiley: !!! 
