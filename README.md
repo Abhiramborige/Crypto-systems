@@ -12,4 +12,6 @@
 * Caeser cipher
   * Encryption
   * Decryption
+* Rail Fence cipher
+ * Encryption
 ### Hope you like it :smiley::smiley: !!! 
