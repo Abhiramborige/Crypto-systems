@@ -15,4 +15,7 @@
 * Rail Fence cipher
   * Encryption
   * Decryption
+* Vernam cipher
+  * Encryption
+  * Decryption
 ### Hope you like it :smiley::smiley: !!! 
