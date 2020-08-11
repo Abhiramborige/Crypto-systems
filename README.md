@@ -1,21 +1,24 @@
 ## Crypto-systems
 ### This *repository* contains the python codes for:
-* Playfair cipher 
+* Playfair substitution cipher 
   * Encryption
   * Decryption
-* Vigenere cipher
+* Vigenere substitution cipher
   * Encryption
   * Decryption
-* Hill cipher
+* Hill substitution cipher
   * Encryption
   * Decryption
-* Caeser cipher
+* Caeser substitution cipher
   * Encryption
   * Decryption
-* Rail Fence cipher
+* Rail Fence transposition cipher
   * Encryption
   * Decryption
-* Vernam cipher
+* Vernam substitution cipher
+  * Encryption
+  * Decryption
+* Columnar transposition cipher
   * Encryption
   * Decryption
 ### Hope you like it :smiley::smiley: !!! 
