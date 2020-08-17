@@ -305,3 +305,11 @@ Round: Left key part: Right key part: SubKey used:
 16       14A7D678        18CA18AD     194CD072DE8C
 Cipher text is:  123456ABCD132536
 '''
+'''
+For decryption, we have to add just two lines, which server the purpose of 
+reversing the array, which stores the sub keys for different rounds
+
+For decryption, just we have to reverse the array which stores the sub keys:
+key_from_pc2_bin=key_from_pc2_bin[::-1]
+key_from_pc2_hex=key_from_pc2_hex[::-1]
+'''
