@@ -265,44 +265,64 @@ def decrypt(msg,key):
   combine=left+right
   plain_text=initial_permutation(combine,final_perm,64)
   return plain_text
-    
+
+# Padding function
+def pad(msg):
+  if(len(msg)%16!=0):
+    print("Padding required")
+    for i in range(abs(16-(len(msg)%16))):
+      msg=msg+'0'
+  else:
+    print("No padding required")
+  return(msg)
 
 # Main function
-print("Enter the 64bit message to be decrypted: ")
+print("Enter the message to be decrypted: ")
 cipher_text=input()
+cipher_text=pad(cipher_text)
+print("Message after padding: ", cipher_text)
+  
 print("Enter the 64bit key for decryption: ")
 key=input()
+key=pad(key)
+print("Key after padding: ",key)
 
-plain_text=bin_to_hexa(decrypt(plain_text,key))
+plain_text=bin_to_hexa(encrypt(cipher_text,key))
 print("Plain text is: ",plain_text)
+
 
 '''
 ----------OUTPUT----------
-Enter the 64bit message to be decrypted: 
-C0B7A8D05F3A829C
+Enter the message to be decrypted: 
+86760F7ABEE16B24
+No padding required
+Message after padding:  86760F7ABEE16B24
 Enter the 64bit key for decryption: 
-AABB09182736CCDD
+74631BBDCA8
+Padding required
+Key after padding:  74631BBDCA800000
 Encryption
-Message after initial permutation:  19BA9212CF26B472
-The converted 56bit key is:  11000011110000000011001110100011001111110000110011111010
+Message after initial permutation:  6A1A976431FA5C5F
+The converted 56bit key is:  00111000000100110000101100000001011000001001000111001101
 
 Round: Left key part: Right key part: SubKey used:
-01       CF26B472        BD2DD2AB     181C5D75C66D
-02       BD2DD2AB        387CCDAA     3330C5D9A36D
-03       387CCDAA        22A5963B     251B8BC717D0
-04       22A5963B        FF3C485F     99C31397C91F
-05       FF3C485F        6CA6CB20     C2C1E96A4BF3
-06       6CA6CB20        10AF9D37     6D5560AF7CA5
-07       10AF9D37        308BEE97     02765708B5BF
-08       308BEE97        A9FC20A3     84BB4473DCCC
-09       A9FC20A3        2E8F9C65     34F822F0C66D
-10       2E8F9C65        A15A4B87     708AD2DDB3C0
-11       A15A4B87        236779C2     C1948E87475E
-12       236779C2        B8089591     69A629FEC913
-13       B8089591        4A1210F6     DA2D032B6EE3
-14       4A1210F6        5A78E394     06EDA4ACF5B5
-15       5A78E394        18CA18AD     4568581ABCCE
-16       14A7D678        18CA18AD     194CD072DE8C
-Plain text is:  123456ABCD132536
+01       31FA5C5F        29B656BD     16AB20801DC9
+02       29B656BD        5706FABD     54412204E41E
+03       5706FABD        7669590A     10C4D8788942
+04       7669590A        EA0DAA35     4930C4372660
+05       EA0DAA35        0A6342EC     231E0184B313
+06       0A6342EC        62E16561     942303B208CA
+07       62E16561        488D0D53     80C9B8746225
+08       488D0D53        458145D1     494060887282
+09       458145D1        B2467F7F     4814910716B4
+10       B2467F7F        44AE2868     23270490981F
+11       44AE2868        69DDF400     A46803610AE8
+12       69DDF400        7C74DB60     108972C57034
+13       7C74DB60        8F2C919D     40D08808191A
+14       8F2C919D        6E81D6DE     69064C734D28
+15       6E81D6DE        5C466E23     8A34034AB231
+16       4B5D2471        5C466E23     A289056D34C0
+Plain text is:  536ABCD8910FF900
+>>> 
 '''
 
