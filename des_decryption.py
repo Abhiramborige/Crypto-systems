@@ -198,7 +198,7 @@ def initial_permutation(plain_text,initial_perm, no_bits):
   return permutation 
 
 # Encryption function is implemented here
-def encrypt(msg,key):
+def decrypt(msg,key):
   print("Encryption")
   msg=hexa_to_bin(msg)
   msg = initial_permutation(msg, initial_perm, 64) 
@@ -273,7 +273,7 @@ cipher_text=input()
 print("Enter the 64bit key for decryption: ")
 key=input()
 
-plain_text=bin_to_hexa(encrypt(plain_text,key))
+plain_text=bin_to_hexa(decrypt(plain_text,key))
 print("Plain text is: ",plain_text)
 
 '''
