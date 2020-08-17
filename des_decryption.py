@@ -287,7 +287,7 @@ key=input()
 key=pad(key)
 print("Key after padding: ",key)
 
-plain_text=bin_to_hexa(encrypt(cipher_text,key))
+plain_text=bin_to_hexa(decrypt(cipher_text,key))
 print("Plain text is: ",plain_text)
 
 
