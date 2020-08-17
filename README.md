@@ -21,4 +21,7 @@
 * Columnar transposition cipher
   * Encryption
   * Decryption
+* DES (Data Encryption Standard)
+  * Encryption
+  * Decryption
 ### Hope you like it :smiley::smiley: !!! 
