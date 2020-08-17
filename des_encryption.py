@@ -264,47 +264,66 @@ def encrypt(msg,key):
   combine=left+right
   cipher_text=initial_permutation(combine,final_perm,64)
   return cipher_text
-    
+
+# Padding function
+def pad(msg):
+  if(len(msg)%16!=0):
+    print("Padding required")
+    for i in range(abs(16-(len(msg)%16))):
+      msg=msg+'0'
+  else:
+    print("No padding required")
+  return(msg)
 
 # Main function
-print("Enter the 64bit message to be encrypted: ")
+print("Enter the message to be encrypted: ")
 plain_text=input()
+plain_text=pad(plain_text)
+print("Message after padding: ", plain_text)
+  
 print("Enter the 64bit key for encryption: ")
 key=input()
+key=pad(key)
+print("Key after padding: ",key)
 
 cipher_text=bin_to_hexa(encrypt(plain_text,key))
 print("Cipher text is: ",cipher_text)
 
 '''
 ----------OUTPUT----------
-Enter the 64bit message to be encrypted: 
-123456ABCD132536
+Enter the message to be encrypted: 
+536ABCD8910FF9
+Padding required
+Message after padding:  536ABCD8910FF900
 Enter the 64bit key for encryption: 
-AABB09182736CCDD
+74631BBDCA8
+Padding required
+Key after padding:  74631BBDCA800000
 Encryption
-Message after initial permutation:  14A7D67818CA18AD
-The converted 56bit key is:  11000011110000000011001110100011001111110000110011111010
+Message after initial permutation:  4B5D24715C466E23
+The converted 56bit key is:  00111000000100110000101100000001011000001001000111001101
 
 Round: Left key part: Right key part: SubKey used:
-01       18CA18AD        5A78E394     194CD072DE8C
-02       5A78E394        4A1210F6     4568581ABCCE
-03       4A1210F6        B8089591     06EDA4ACF5B5
-04       B8089591        236779C2     DA2D032B6EE3
-05       236779C2        A15A4B87     69A629FEC913
-06       A15A4B87        2E8F9C65     C1948E87475E
-07       2E8F9C65        A9FC20A3     708AD2DDB3C0
-08       A9FC20A3        308BEE97     34F822F0C66D
-09       308BEE97        10AF9D37     84BB4473DCCC
-10       10AF9D37        6CA6CB20     02765708B5BF
-11       6CA6CB20        FF3C485F     6D5560AF7CA5
-12       FF3C485F        22A5963B     C2C1E96A4BF3
-13       22A5963B        387CCDAA     99C31397C91F
-14       387CCDAA        BD2DD2AB     251B8BC717D0
-15       BD2DD2AB        CF26B472     3330C5D9A36D
-16       19BA9212        CF26B472     181C5D75C66D
-Cipher text is:  C0B7A8D05F3A829C
+01       5C466E23        6E81D6DE     A289056D34C0
+02       6E81D6DE        8F2C919D     8A34034AB231
+03       8F2C919D        7C74DB60     69064C734D28
+04       7C74DB60        69DDF400     40D08808191A
+05       69DDF400        44AE2868     108972C57034
+06       44AE2868        B2467F7F     A46803610AE8
+07       B2467F7F        458145D1     23270490981F
+08       458145D1        488D0D53     4814910716B4
+09       488D0D53        62E16561     494060887282
+10       62E16561        0A6342EC     80C9B8746225
+11       0A6342EC        EA0DAA35     942303B208CA
+12       EA0DAA35        7669590A     231E0184B313
+13       7669590A        5706FABD     4930C4372660
+14       5706FABD        29B656BD     10C4D8788942
+15       29B656BD        31FA5C5F     54412204E41E
+16       6A1A9764        31FA5C5F     16AB20801DC9
+Cipher text is:  86760F7ABEE16B24
 >>> 
 '''
+
 '''
 For decryption, we have to add just two lines, which server the purpose of 
 reversing the array, which stores the sub keys for different rounds
