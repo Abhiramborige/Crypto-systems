@@ -24,4 +24,7 @@
 * DES (Data Encryption Standard)
   * Encryption
   * Decryption
+* AES (Advanced Encryption Standard)
+  * Encryption
+  * Decryption
 ### Hope you like it :smiley::smiley: !!! 
