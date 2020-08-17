@@ -263,24 +263,24 @@ def encrypt(msg,key):
 
   # concatinating both left and right
   combine=left+right
-  cipher_text=initial_permutation(combine,final_perm,64)
-  return cipher_text
+  plain_text=initial_permutation(combine,final_perm,64)
+  return plain_text
     
 
 # Main function
-print("Enter the 64bit message to be encrypted: ")
-plain_text=input()
-print("Enter the 64bit key for encryption: ")
+print("Enter the 64bit message to be decrypted: ")
+cipher_text=input()
+print("Enter the 64bit key for decryption: ")
 key=input()
 
-cipher_text=bin_to_hexa(encrypt(plain_text,key))
-print("Cipher text is: ",cipher_text)
+plain_text=bin_to_hexa(encrypt(plain_text,key))
+print("Plain text is: ",plain_text)
 
 '''
 ----------OUTPUT----------
-Enter the 64bit message to be encrypted: 
+Enter the 64bit message to be decrypted: 
 C0B7A8D05F3A829C
-Enter the 64bit key for encryption: 
+Enter the 64bit key for decryption: 
 AABB09182736CCDD
 Encryption
 Message after initial permutation:  19BA9212CF26B472
@@ -303,13 +303,6 @@ Round: Left key part: Right key part: SubKey used:
 14       4A1210F6        5A78E394     06EDA4ACF5B5
 15       5A78E394        18CA18AD     4568581ABCCE
 16       14A7D678        18CA18AD     194CD072DE8C
-Cipher text is:  123456ABCD132536
+Plain text is:  123456ABCD132536
 '''
-'''
-For decryption, we have to add just two lines, which server the purpose of 
-reversing the array, which stores the sub keys for different rounds
 
-For decryption, just we have to reverse the array which stores the sub keys:
-key_from_pc2_bin=key_from_pc2_bin[::-1]
-key_from_pc2_hex=key_from_pc2_hex[::-1]
-'''
