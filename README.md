@@ -27,4 +27,11 @@
 * AES (Advanced Encryption Standard)
   * Encryption
   * Decryption
+* Elgamel Crypto system
+  * Encryption
+  * Decryption
+* RSA (Rivest–Shamir–Adleman)
+  * Encryption
+  * Decryption
+* Diffie-Hellman Key exchange algorithm
 ### Hope you like it :smiley::smiley: !!! 
