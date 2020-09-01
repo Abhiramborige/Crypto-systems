@@ -104,6 +104,7 @@ Decrypted message is:  48
 '''
 
 '''
+Note: The message to be encrypted must be less than the prime value given initially
 Took help from: 
 1. https://www.wolframalpha.com/widgets/view.jsp?id=ef51422db7db201ebc03c8800f41ba99
 2. https://en.wikipedia.org/wiki/Primitive_root_modulo_n
