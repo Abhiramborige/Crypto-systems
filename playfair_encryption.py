@@ -167,3 +167,12 @@ plain text:  hitheremynameisabhiram
 cipher text:  rhigyqyamrkaytvmilhzka
 >>> 
 '''
+
+'''
+Took help from:
+1. https://www.youtube.com/watch?v=U_J2xnhblPg
+2. https://www.youtube.com/watch?v=O8MxWNfrzho&t=4s
+3. https://www.youtube.com/watch?v=66K1tplwYqg&t=5s
+4. https://www.youtube.com/watch?v=2PUInSjhxNs
+Thanks for the help !!!
+'''
