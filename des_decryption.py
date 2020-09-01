@@ -326,3 +326,7 @@ Plain text is:  536ABCD8910FF900
 >>> 
 '''
 
+'''
+Took help from: https://www.geeksforgeeks.org/data-encryption-standard-des-set-1
+Thanks for the help !
+'''
