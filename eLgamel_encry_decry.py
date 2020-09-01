@@ -15,32 +15,49 @@ def groupMembers(n):
 
 # Function to return the primitive roots modulo p (Zp*)
 def PrimitiveRoots(p): 
-    arr=[]
     members=groupMembers(p)
     factors=[]
+    print("Euler's toutient function value: ")
+    print("Phi(p): ",len(members))
     for i in range(1,len(members)+1):
         if(len(members)%i==0):
             factors.append(i)
+    c=[]
     for i in members:
+        ar=[]
         for j in factors:
-            if(pow(i,j)%p==1 and j==len(members)):
-                arr.append(i)
-    return list(set(arr))
+            if(pow(i,j)%p==1):
+                ar.append(j)
+        if(len(ar)==0):
+            c.append(0)
+        else:
+            c.append(min(ar))        
+    return(c)
 
 p=int(input("Enter a large prime number: "))
-print("The members in the group  Zp* are: ",groupMembers(p))
+members=groupMembers(p)
+print("The members in the group  Zp* are: ",members)
 
 # d to be a member of the Zp* 
 d=int(input("Select a number from the array as d(private key): "))
-if(d not in groupMembers(p) or d>p-2):
+if(d not in members or d>p-2):
     print("Entered wrong number")
     
 else:
-    
+    primitives=[]
+    powers=PrimitiveRoots(p)
+
+    # finding primitives from powers
+    # Used Legrange's theorem
+    for i in powers:
+        if(i==len(members)):
+            primitives.append(members[powers.index(i)])
+            powers[powers.index(i)]=0
+            
     # e1 is primitive root in Zp*
-    print("The list of primitive roots are: ",PrimitiveRoots(p))
-    e1=int(input("Enter the primitive root in Zp*: "))
-    if(e1 not in PrimitiveRoots(p)):
+    print("The list of primitive roots are: ",primitives)
+    e1=int(input("Enter the primitive root of Zp*: "))
+    if(e1 not in primitives):
         print("Entered wrong number")
         
     else:
@@ -49,9 +66,9 @@ else:
         print("Private key (d): ",d)
 
         # Encryption
-        print("Enter an integer from Zp*: ", groupMembers(p))
+        print("Enter an integer from Zp*: ", members)
         r=int(input())
-        if(r not in groupMembers(p)):
+        if(r not in members):
             print("Entered wrong number")
             
         else:
@@ -66,27 +83,30 @@ else:
             print("Encrypted message (C2): ",C2)
             print("Decrypted message is: ",P)
 
-
 '''
 ----------OUTPUT----------
-Enter a large prime number: 29
-The members in the group  Zp* are:  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28]
-Select a number from the array as d(private key): 18
-The list of primitive roots are:  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28]
-Enter the primitive root in Zp*: 23
-Public key (e1,e2,p):  23   20   29
-Private key (d):  18
-Enter an integer from Zp*:  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28]
-22
-Enter the message in numbers: 17
-Encrypted message (C1):  23
-Encrypted message (C2):  21
-Decrypted message is:  17
+Enter a large prime number: 53
+The members in the group  Zp* are:  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52]
+Select a number from the array as d(private key): 36
+Euler's toutient function value: 
+Phi(p):  52
+The list of primitive roots are:  [2, 3, 5, 8, 12, 14, 18, 19, 20, 21, 22, 26, 27, 31, 32, 33, 34, 35, 39, 41, 45, 48, 50, 51]
+Enter the primitive root of Zp*: 50
+Public key (e1,e2,p):  50   46   53
+Private key (d):  36
+Enter an integer from Zp*:  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52]
+31
+Enter the message in numbers: 48
+Encrypted message (C1):  31
+Encrypted message (C2):  30
+Decrypted message is:  48
 >>> 
 '''
 
 '''
 Took help from: 
-https://www.geeksforgeeks.org/find-the-number-of-primitive-roots-modulo-prime/
+1. https://www.wolframalpha.com/widgets/view.jsp?id=ef51422db7db201ebc03c8800f41ba99
+2. https://en.wikipedia.org/wiki/Primitive_root_modulo_n
 Thanks for the help !
 '''
+
