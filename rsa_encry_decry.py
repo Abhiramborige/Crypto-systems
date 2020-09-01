@@ -67,9 +67,16 @@ def decrypt(private_key, to_decrypt):
     return decrypted
 
 # Main Program
-p=getPrime(6)
+# primes of 8 bits in length in binary
+p=getPrime(8)
+q=getPrime(8)
+
+# to make sure that p not equal to q while generating randomly
+while(p==q):
+    p=getPrime(8)
+    q=getPrime(8)
+    
 print("Randomly generated prime number p: ",p)
-q=getPrime(6)
 print("Randomly generated prime number q: ",q)
 
 print("Generating Public/Private key-pairs!")
@@ -78,6 +85,10 @@ print("Your public key is (e,n) ", public)
 print("Your private key is (d,n) ", private)
 
 message = input("Enter the message: ")
+
+# converting into lower case and removing spaces
+message=message.replace(" ","")
+message=message.lower()
 arr=[]
 cipher_text=[]
 for i in message:
@@ -96,3 +107,30 @@ for i in plain:
     plain_text=plain_text+main[i]
 print("Plain text array: ",plain)
 print("Decrypted message (Plain Text): ", plain_text)
+
+
+'''
+----------OUTPUT----------
+Randomly generated prime number p:  157
+Randomly generated prime number q:  149
+Generating Public/Private key-pairs!
+Value of n:  23393
+Value of phi(n):  23088
+Enter e such that is co-prime to  23088 : 
+23
+Value of exponent(e) entered is:  23
+Your public key is (e,n)  (23, 23393)
+Your private key is (d,n)  (6023, 23393)
+Enter the message: WORLD WINNER
+Encrypted message (Cipher Text):  [22344, 18436, 8290, 15143, 15339, 22344, 8926, 8780, 8780, 22321, 8290]
+Plain text array:  [22, 14, 17, 11, 3, 22, 8, 13, 13, 4, 17]
+Decrypted message (Plain Text):  worldwinner
+>>> 
+'''
+
+'''
+Took help from: 
+1. https://github.com/agottiparthy1/rsa/blob/master/rsa_python
+2. https://github.com/faisalkhan91/RSA-Algorithm/blob/master/RSA.py
+Thank you !!
+'''
