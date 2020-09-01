@@ -65,4 +65,28 @@ else:
             print("Encrypted message (C1): ",C1)
             print("Encrypted message (C2): ",C2)
             print("Decrypted message is: ",P)
-    
+
+
+'''
+----------OUTPUT----------
+Enter a large prime number: 29
+The members in the group  Zp* are:  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28]
+Select a number from the array as d(private key): 18
+The list of primitive roots are:  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28]
+Enter the primitive root in Zp*: 23
+Public key (e1,e2,p):  23   20   29
+Private key (d):  18
+Enter an integer from Zp*:  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28]
+22
+Enter the message in numbers: 17
+Encrypted message (C1):  23
+Encrypted message (C2):  21
+Decrypted message is:  17
+>>> 
+'''
+
+'''
+Took help from: 
+https://www.geeksforgeeks.org/find-the-number-of-primitive-roots-modulo-prime/
+Thanks for the help !
+'''
