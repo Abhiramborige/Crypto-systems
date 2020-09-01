@@ -42,3 +42,10 @@ cipher text:  he xzsdi zu brxh io etvuvni
 plain text (message):  hi there my name is abhiram
 >>>
 '''
+
+'''
+Took help from:
+1. https://www.youtube.com/watch?v=FAbkLSktxWQ
+2. https://www.youtube.com/watch?v=zLbZM_MA3qE&t=575s
+'''
+
