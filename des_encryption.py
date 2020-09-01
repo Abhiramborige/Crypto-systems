@@ -332,3 +332,8 @@ For decryption, just we have to reverse the array which stores the sub keys:
 key_from_pc2_bin=key_from_pc2_bin[::-1]
 key_from_pc2_hex=key_from_pc2_hex[::-1]
 '''
+
+'''
+Took help from: https://www.geeksforgeeks.org/data-encryption-standard-des-set-1
+Thanks for the help !
+'''
