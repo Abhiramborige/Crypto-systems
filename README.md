@@ -34,4 +34,5 @@
   * Encryption
   * Decryption
 * Diffie-Hellman Key exchange algorithm
+* Man In The Middle Attack Simulation
 ### Hope you like it :smiley::smiley: !!! 
