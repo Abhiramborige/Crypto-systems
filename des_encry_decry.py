@@ -336,9 +336,39 @@ key_from_pc2_bin=key_from_pc2_bin[::-1]
 key_from_pc2_hex=key_from_pc2_hex[::-1]
 '''
 
-
-
-
+'''
+----------OUTPUT----------
+Enter the message to be decrypted: 
+86760F7ABEE16B24
+No padding required
+Message after padding:  86760F7ABEE16B24
+Enter the 64bit key for decryption: 
+74631BBDCA8
+Padding required
+Key after padding:  74631BBDCA800000
+Encryption
+Message after initial permutation:  6A1A976431FA5C5F
+The converted 56bit key is:  00111000000100110000101100000001011000001001000111001101
+Round: Left key part: Right key part: SubKey used:
+01       31FA5C5F        29B656BD     16AB20801DC9
+02       29B656BD        5706FABD     54412204E41E
+03       5706FABD        7669590A     10C4D8788942
+04       7669590A        EA0DAA35     4930C4372660
+05       EA0DAA35        0A6342EC     231E0184B313
+06       0A6342EC        62E16561     942303B208CA
+07       62E16561        488D0D53     80C9B8746225
+08       488D0D53        458145D1     494060887282
+09       458145D1        B2467F7F     4814910716B4
+10       B2467F7F        44AE2868     23270490981F
+11       44AE2868        69DDF400     A46803610AE8
+12       69DDF400        7C74DB60     108972C57034
+13       7C74DB60        8F2C919D     40D08808191A
+14       8F2C919D        6E81D6DE     69064C734D28
+15       6E81D6DE        5C466E23     8A34034AB231
+16       4B5D2471        5C466E23     A289056D34C0
+Plain text is:  536ABCD8910FF900
+>>> 
+'''
 
 '''
 Took help from: https://www.geeksforgeeks.org/data-encryption-standard-des-set-1
