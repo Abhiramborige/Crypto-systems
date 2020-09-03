@@ -110,4 +110,3 @@ Took help from:
 2. https://en.wikipedia.org/wiki/Primitive_root_modulo_n
 Thanks for the help !
 '''
-
