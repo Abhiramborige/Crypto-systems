@@ -1,4 +1,4 @@
-# the public parameters are passed 
+# the public parameters are passed as they are known globally 
 def attacker(prime, root, alicepublic, bobpublic):
     attacksecret1=int(input("Enter a secret number1 for attacker: "))
     attacksecret2=int(input("Enter a secret number2 for attacker: "))
@@ -72,3 +72,46 @@ print ("Shared final key: ", bobkey, "\n")
 
 print("The final keys are different. ")
 
+'''
+----------OUTPUT----------
+Both parties agree to a single prime
+Enter the prime number to be considered: 61
+Both must agree with single primitive root to use
+Enter the primitive root: 43
+Enter a secret number for Party1: 6756
+Enter a secret number for Party2: 8356
+
+
+Party1's  public key -> A=root^alicesecret(mod(prime))
+Party1 public key is:  34 
+
+Party2's public key -> B=root^bobsecret(mod(prime))
+Party2 public key is 15 
+
+Party1 calculates the shared key as K=B^alicesecret*(mod(prime))
+Party1 calculates the shared key and results:  34 
+
+Party2 calculates the shared key as K=A^bobsecret(mod(prime))
+Party2 calculates the shared key and results:  34 
+
+Attacker does not know the shared private key that Party1 & Party2 can now use
+Now Eve implements Man In the Middle Attack !!
+Enter a secret number1 for attacker: 7349
+Enter a secret number2 for attacker: 3560
+
+
+Attacker's  public key -> C=root^attacksecret(mod(prime))
+Attacker public key1 which is shared with Party1:  17
+Attacker public key2 which is shared with Party2:  47
+
+
+The key used to decrypt message from A and modify:  9
+The key used to encrypt message to be sent to B is:  47
+Party1 calculates the shared key with attacker's public key1: 
+Shared final key:  9
+Party2 calculates the shared key with attacker's public key2: 
+Shared final key:  47 
+
+The final keys are different. 
+>>> 
+'''
