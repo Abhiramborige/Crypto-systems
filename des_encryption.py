@@ -227,7 +227,10 @@ def encrypt(msg,key):
     round_key=initial_permutation(combine_key,perm_cho_2,48)
     key_from_pc2_bin.append(round_key)
     key_from_pc2_hex.append(bin_to_hexa(round_key))
-    
+  
+  # For decryption, just uncomment below two lines
+  # key_from_pc2_bin=key_from_pc2_bin[::-1]
+  # key_from_pc2_hex=key_from_pc2_hex[::-1]  
 
   # Message transformation
   # Encryption
@@ -332,6 +335,10 @@ For decryption, just we have to reverse the array which stores the sub keys:
 key_from_pc2_bin=key_from_pc2_bin[::-1]
 key_from_pc2_hex=key_from_pc2_hex[::-1]
 '''
+
+
+
+
 
 '''
 Took help from: https://www.geeksforgeeks.org/data-encryption-standard-des-set-1
