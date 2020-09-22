@@ -127,3 +127,34 @@ print()
 file_name=input("Enter the name of document to verify: ")
 verification(file_name,global_var[0],global_var[1],global_var[2],components[0],components[1],keys[1])
 
+'''
+----------OUTPUT----------
+Prime divisor (q):  17
+Prime modulus (p):  919
+Enter integer between 1 and p-1(h): 849
+Value of g is :  706
+Randomly chosen x(Private key) is:  2
+Randomly chosen y(Public key) is:  338
+
+Enter the name of document to sign: document.txt
+Hash of document sent is:  3894a47de87c305c214cc3b41595eead3ba5fe82
+r(Component of signature) is:  2
+k(Randomly chosen number) is:  7
+s(Component of signature) is:  2
+
+Enter the name of document to verify: document.txt
+Hash of document received is:  3ff12eae3810c23c294ba8eeb7201885f9a51b94
+Value of w is :  9
+Value of u1 is:  2
+Value of u2 is:  1
+Value of v is :  16
+The signature is invalid!
+>>> 
+'''
+
+'''
+Took help from:
+1. https://en.wikipedia.org/wiki/Digital_Signature_Algorithm
+2. https://www.includehelp.com/cryptography/digital-signature-algorithm-dsa.aspx
+Thanks for the help !
+'''
