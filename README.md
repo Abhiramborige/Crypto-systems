@@ -15,23 +15,18 @@
 * Hill substitution cipher
   * [Encryption](hill_encryption.py)
   * [Decryption](hill_decryption.py)
-  * [Reference](<h1>Done by my own</h1>)
 * Caeser substitution cipher
   * [Encryption](caesar_encryption.py)
   * [Decryption](caesar_decryption.py)
-  * [Reference](<h1>Done by my own</h1>)
 * Rail Fence transposition cipher
   * [Encryption](railfence_encryption.py)
   * [Decryption](railfence_decryption.py)
-  * [Reference](<h1>Done by my own</h1>)
 * Vernam substitution cipher
   * [Encryption](vernam_encryption.py)
   * [Decryption](vernam_decryption.py)
-  * [Reference](<h1>Done by my own</h1>)
 * Columnar transposition cipher
   * [Encryption](columnar_transposition_encryption.py)
   * [Decryption](columnar_transposition_decryption.py)
-  * [Reference](<h1>Done by my own</h1>)
 * DES (Data Encryption Standard)
   * [Encryption](des_encry_decry.py)
   * [Decryption](des_encry_decry.py)
@@ -61,8 +56,7 @@
 * [Digital Signature Algorithm](digital_signature.py)
   * [Reference_1](https://en.wikipedia.org/wiki/Digital_Signature_Algorithm)
   * [Reference_2](https://www.includehelp.com/cryptography/digital-signature-algorithm-dsa.aspx)
-* [Elliptic curve cryptography]()
+* [Elliptic curve cryptography](elliptic_curve_encry_decry.py)
   * [Encryption](elliptic_curve_encry_decry.py)
   * [Decryption](elliptic_curve_encry_decry.py)
-  * [Reference](<h1>Done by my own</h1>)
 ### Hope you like it :smiley::smiley: !!! 
