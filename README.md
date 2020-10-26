@@ -25,8 +25,8 @@
   * Encryption
   * Decryption
 * AES (Advanced Encryption Standard)
-  * Encryption
-  * Decryption
+  * [Encryption](aes_encry_decry.py)
+  * [Decryption](aes_encry_decry.py)
 * Elgamel Crypto system
   * Encryption
   * Decryption
