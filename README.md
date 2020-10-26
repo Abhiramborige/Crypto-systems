@@ -1,42 +1,68 @@
 ## Crypto-systems
 ### This *repository* contains the python codes for:
 * Playfair substitution cipher 
-  * Encryption
-  * Decryption
+  * [Encryption](playfair_encryption.py)
+  * [Decryption](playfair_decryption.py)
+  * [Reference_1](https://www.youtube.com/watch?v=U_J2xnhblPg)
+  * [Reference_2](https://www.youtube.com/watch?v=O8MxWNfrzho&t=4s)
+  * [Reference_3](https://www.youtube.com/watch?v=66K1tplwYqg&t=5s)
+  * [Reference_4](https://www.youtube.com/watch?v=2PUInSjhxNs)
 * Vigenere substitution cipher
-  * Encryption
-  * Decryption
+  * [Encryption](vigenere_encryption.py)
+  * [Decryption](vigenere_decryption.py)
+  * [Reference_1](https://www.youtube.com/watch?v=FAbkLSktxWQ)
+  * [Reference_2](https://www.youtube.com/watch?v=zLbZM_MA3qE&t=575s)
 * Hill substitution cipher
-  * Encryption
-  * Decryption
+  * [Encryption](hill_encryption.py)
+  * [Decryption](hill_decryption.py)
+  * [Reference](<h1>Done by my own</h1>)
 * Caeser substitution cipher
-  * Encryption
-  * Decryption
+  * [Encryption](caesar_encryption.py)
+  * [Decryption](caesar_decryption.py)
+  * [Reference](<h1>Done by my own</h1>)
 * Rail Fence transposition cipher
-  * Encryption
-  * Decryption
+  * [Encryption](railfence_encryption.py)
+  * [Decryption](railfence_decryption.py)
+  * [Reference](<h1>Done by my own</h1>)
 * Vernam substitution cipher
-  * Encryption
-  * Decryption
+  * [Encryption](vernam_encryption.py)
+  * [Decryption](vernam_decryption.py)
+  * [Reference](<h1>Done by my own</h1>)
 * Columnar transposition cipher
-  * Encryption
-  * Decryption
+  * [Encryption](columnar_transposition_encryption.py)
+  * [Decryption](columnar_transposition_decryption.py)
+  * [Reference](<h1>Done by my own</h1>)
 * DES (Data Encryption Standard)
-  * Encryption
-  * Decryption
+  * [Encryption](des_encry_decry.py)
+  * [Decryption](des_encry_decry.py)
+  * [Reference](https://www.geeksforgeeks.org/data-encryption-standard-des-set-1)
 * AES (Advanced Encryption Standard)
   * [Encryption](aes_encry_decry.py)
   * [Decryption](aes_encry_decry.py)
+  * [Reference](https://medium.com/quick-code/aes-implementation-in-python-a82f582f51c2)
 * Elgamel Crypto system
-  * Encryption
-  * Decryption
+  * [Encryption](elGamel_encry_decry.py)
+  * [Decryption](elGamel_encry_decry.py)
+  * [Reference_1](https://www.wolframalpha.com/widgets/view.jsp?id=ef51422db7db201ebc03c8800f41ba99)
+  * [Reference_2](https://en.wikipedia.org/wiki/Primitive_root_modulo_n)
 * RSA (Rivest–Shamir–Adleman)
-  * Encryption
-  * Decryption
-* Diffie-Hellman Key exchange algorithm
-* Man In The Middle Attack Simulation
-* Digital Signature Algorithm
-* Elliptic curve cryptography
-  * Encryption
-  * Decryption
+  * [Encryption](rsa_encry_decry.py)
+  * [Decryption](rsa_encry_decry.py)
+  * [Reference_1](https://github.com/agottiparthy1/rsa/blob/master/rsa_python)
+  * [Reference_2](https://github.com/faisalkhan91/RSA-Algorithm/blob/master/RSA.py)
+* [Diffie-Hellman Key exchange algorithm](diff_hellmen_key_exchange.py)
+  * [Reference_1](https://sublimerobots.com/2015/01/simple-diffie-hellman-example-python/)
+  * [Reference_2](https://trinket.io/python/d574095364)
+  * [Reference_3](https://www.wolframalpha.com/widgets/view.jsp?id=ef51422db7db201ebc03c8800f41ba99)
+* [Man In The Middle Attack Simulation](man_in_the_middle.py)
+  * [Reference_1](https://sublimerobots.com/2015/01/simple-diffie-hellman-example-python/)
+  * [Reference_2](https://trinket.io/python/d574095364)
+  * [Reference_3](https://www.wolframalpha.com/widgets/view.jsp?id=ef51422db7db201ebc03c8800f41ba99)
+* [Digital Signature Algorithm](digital_signature.py)
+  * [Reference_1](https://en.wikipedia.org/wiki/Digital_Signature_Algorithm)
+  * [Reference_2](https://www.includehelp.com/cryptography/digital-signature-algorithm-dsa.aspx)
+* [Elliptic curve cryptography]()
+  * [Encryption](elliptic_curve_encry_decry.py)
+  * [Decryption](elliptic_curve_encry_decry.py)
+  * [Reference](<h1>Done by my own</h1>)
 ### Hope you like it :smiley::smiley: !!! 
