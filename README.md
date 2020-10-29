@@ -59,4 +59,5 @@
 * [Elliptic curve cryptography](elliptic_curve_encry_decry.py)
   * [Encryption](elliptic_curve_encry_decry.py)
   * [Decryption](elliptic_curve_encry_decry.py)
+* [Message Authenticaiton Code with SHA-1](hmac_with_sha1.py)
 ### Hope you like it :smiley::smiley: !!! 
