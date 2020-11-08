@@ -45,19 +45,25 @@
   * [Decryption](rsa_encry_decry.py)
   * [Reference_1](https://github.com/agottiparthy1/rsa/blob/master/rsa_python)
   * [Reference_2](https://github.com/faisalkhan91/RSA-Algorithm/blob/master/RSA.py)
-* [Diffie-Hellman Key exchange algorithm](diff_hellmen_key_exchange.py)
+* [Diffie-Hellman Key exchange algorithm]
+  * [Code](diff_hellmen_key_exchange.py)
   * [Reference_1](https://sublimerobots.com/2015/01/simple-diffie-hellman-example-python/)
   * [Reference_2](https://trinket.io/python/d574095364)
   * [Reference_3](https://www.wolframalpha.com/widgets/view.jsp?id=ef51422db7db201ebc03c8800f41ba99)
-* [Man In The Middle Attack Simulation](man_in_the_middle.py)
+* [Man In The Middle Attack Simulation]
+  * [Code](man_in_the_middle.py)
   * [Reference_1](https://sublimerobots.com/2015/01/simple-diffie-hellman-example-python/)
   * [Reference_2](https://trinket.io/python/d574095364)
   * [Reference_3](https://www.wolframalpha.com/widgets/view.jsp?id=ef51422db7db201ebc03c8800f41ba99)
-* [Digital Signature Algorithm](digital_signature.py)
+* [Digital Signature Algorithm]
+  * [Code](digital_signature.py)
   * [Reference_1](https://en.wikipedia.org/wiki/Digital_Signature_Algorithm)
   * [Reference_2](https://www.includehelp.com/cryptography/digital-signature-algorithm-dsa.aspx)
-* [Elliptic curve cryptography](elliptic_curve_encry_decry.py)
+* [Elliptic curve cryptography]
   * [Encryption](elliptic_curve_encry_decry.py)
   * [Decryption](elliptic_curve_encry_decry.py)
-* [Message Authenticaiton Code with SHA-1](hmac_with_sha1.py)
+* [Message Authenticaiton Code with SHA-1]
+  * [Code](hmac_with_sha1.py)
+* Blowfish Algorithm
+  * [Code](blowfish_encry_decry.py)
 ### Hope you like it :smiley::smiley: !!! 
