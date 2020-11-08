@@ -262,6 +262,11 @@ def blowfish(left, right, mode="e"):
         BF_tuple[1],
         BF_tuple[2]
     ):
+        # output left and right block
+        if round >= 10:
+            print(str(round)+".", str(next_left).rjust(12), "    ", str(next_right).rjust(12))
+        else:
+            print(str(round)+".", str(next_left).rjust(13), "    ", str(next_right).rjust(12))
         next_left = next_left ^ p_box[round]
         next_right = next_right ^ f(next_left)
 
@@ -273,8 +278,20 @@ def blowfish(left, right, mode="e"):
     # exchange is needed here
     next_left, next_right = next_right, next_left
 
+    # output left and right block
+    if BF_tuple[4] >= 10:
+        print(str(BF_tuple[4])+".", str(next_left).rjust(12), "    ", str(next_right).rjust(12))
+    else:
+        print(str(BF_tuple[4])+".", str(next_left).rjust(13), "    ", str(next_right).rjust(12))
+
     next_left ^= p_box[BF_tuple[3]]
     next_right ^= p_box[BF_tuple[4]]
+
+    # output left and right block
+    if BF_tuple[3] >= 10:
+        print(str(BF_tuple[3])+".", str(next_left).rjust(12), "    ", str(next_right).rjust(12))
+    else:
+        print(str(BF_tuple[3])+".", str(next_left).rjust(13), "    ", str(next_right).rjust(12))
 
     # concat left block and right block
     return (next_left << 32 | next_right), next_left, next_right
@@ -284,22 +301,91 @@ def sep(block_64):
     return block_64 >> 32, block_64 & 0x0FFFFFFFF
 
 if __name__ == "__main__":
-    print("enter the number to be encrypted(64 bits):")
-    plain_left, plain_right = sep(int(input()))
+    print("Enter the number to be encrypted.")
+    print("(a number with 64 bits is recommanded)\n")
+    print("plain text is:")
+    plain_left, plain_right = sep(int(input(">>> ")))
+    print("\n")
 
+    print("      left block       right block")
+    print("   ", str(plain_left).rjust(12), "    ", str(plain_right).rjust(12))
+
+    print("----------------------------------")
+    print("begin to encrypt.")
+    print("      left block      right block:")
     cipher_txt, cipher_left, cipher_right = blowfish(plain_left, plain_right)
-    print("cipher text is:")
-    print(cipher_txt)
 
-    print("plaintxt decrypted:")
-    print(blowfish(cipher_left, cipher_right, "d")[0])
+    print("\ncipher text is:")
+    print(cipher_txt, "\n")
+
+    print("      left block       right block")
+    print("   ", str(cipher_left).rjust(12), "    ", str(cipher_right).rjust(12))
+    print("----------------------------------")
+
+    print("begin to decrypt:")
+    res = blowfish(cipher_left, cipher_right, "d")
+    print("\nplain text is:")
+    print(res[0], "\n")
 
 '''
 ----------OUTPUT----------
-enter the number to be encrypted(64 bits):
-123456
+Enter the number to be encrypted.
+(a number with 64 bits is recommanded)
+
+plain text is:
+>>> 11166826455674494963
+
+
+      left block       right block
+      2599979391        1055498227
+----------------------------------
+begin to encrypt.
+      left block      right block:
+0.    2599979391        1055498227
+1.    9234312252        3200771063
+2.     558043900       11337950447
+3.     542032042         844798162
+4.    1245896538         591311854
+5.    5220155034        3997951864
+6.    7882738187        4810477386
+7.   13073958036        8018981011
+8.    2579646479       16761137181
+9.   14863498831        3706350057
+10.   5051451477       14180871480
+11.  11861203260        6765637274
+12.  15042131018       12718347600
+13.   3872877575       13962354173
+14.  15526660606         799751386
+15.   9600692748       15618726987
+16.  10896407323       11040877554
+17.   8589934592        8589983275
+
 cipher text is:
-31051339717661314473
-plaintxt decrypted:
-123456
+36893488156009086507
+
+      left block       right block
+      8589934592        8589983275
+----------------------------------
+begin to decrypt:
+17.   8589934592        8589983275
+16.  13705152914       10896407323
+15.   2599171533       15618726987
+14.  15027947592         799751386
+13.   9654158733       13962354173
+12.   5703157549       12718347600
+11.  14929092948        6765637274
+10.   1656622886       14180871480
+9.   16640555882        3706350057
+8.    6859772277       16761137181
+7.    8371069891        8018981011
+6.    3865386464        4810477386
+5.     178356798        3997951864
+4.    2522063088         591311854
+3.   11286550443         844798162
+2.    2917034457       11337950447
+1.    3200771063        3142227744
+0.    2599979391        1055498227
+
+plain text is:
+11166826455674494963
 '''
