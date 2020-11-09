@@ -66,4 +66,8 @@
   * [Code](hmac_with_sha1.py)
 * Blowfish Algorithm
   * [Code](blowfish_encry_decry.py)
+  * [Reference_1](https://cryptography.fandom.com/wiki/Blowfish)
+  * [Reference_2](https://www.drdobbs.com/security/the-blowfish-encryption-algorithm/184409216)
+  * [Reference_3](https://www.schneier.com/academic/archives/1995/09/the_blowfish_encrypt.html)
+  * [Reference_4](https://giordano.github.io/blog/2017-11-21-hexadecimal-pi/)
 ### Hope you like it :smiley::smiley: !!! 
