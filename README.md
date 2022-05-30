@@ -70,4 +70,12 @@
   * [Reference_2](https://www.drdobbs.com/security/the-blowfish-encryption-algorithm/184409216)
   * [Reference_3](https://www.schneier.com/academic/archives/1995/09/the_blowfish_encrypt.html)
   * [Reference_4](https://giordano.github.io/blog/2017-11-21-hexadecimal-pi/)
+* Statistical attack
+  * [Code](statistical_attack.py)
+* Euclidean algorithm for GCD calculation
+  * [Code](euclidean_algo.py)
+* Extended Euclidean algorithm for modular multiplicative inverse calculation
+  * [Code](extended_euclidean_algo.py)
+* Chinese remainder theorem for set of modular equations
+  * [Code](chinese_remainder.py)
 ### Hope you like it :smiley::smiley: !!! 
